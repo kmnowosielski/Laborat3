@@ -1,9 +1,11 @@
 package com.example.kmn.laborat3;
 
+import android.widget.Spinner;
+
 import java.io.Serializable;
 
 public class Animal implements Serializable {
-    private int id;
+    private int _id;
     private String gatunek;
     private String kolor;
     private float wielkosc;
@@ -21,15 +23,15 @@ public class Animal implements Serializable {
     }
 
     @Override
-    public String toString()
-    {
-        return "Zwierze: [id" + id + ", gatunek=" + ", kolor=" + kolor +"wielkosc=" +wielkosc + " ]";
+    public String toString(){
+        return "Zwierze: [id=" + _id + ", gatunek=" + gatunek + ", kolor=" + kolor + ", wielkosc=" + wielkosc +" ]";
     }
+
     public String getOpis(){return opis;}
     public String getGatunek(){return gatunek;}
     public String getKolor(){return kolor;}
     public float getWielkosc(){return wielkosc;}
-    public int getId(){return id;}
-    public void setId(int id){this.id = id;}
+    public int getId(){return _id;}
+    public void setId(int id){this._id = id;}
 
 }
